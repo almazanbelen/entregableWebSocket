@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="form-product">
+        <form action="/product" method="get" id="productForm" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;"> 
+            <h1 class="title">Agregar un producto</h1>       
+            <label for="title">Nombre del producto</label>
+            <input type="text" id="title" class="inputsForm" name="title" required>
+            <label for="description">Descripcion</label>
+            <input type="text" id="description" class="inputsForm" name="description" required>
+            <label for="code">Codigo</label>
+            <input type="text" id="code" class="inputsForm" name="code" required>
+            <label for="price">Precio</label>
+            <input type="text" id="price" class="inputsForm" name="price" required>
+            <label for="stock">Stock</label>
+            <input type="text" id="stock" class="inputsForm" name="stock" required>
+            <label for="category">Categoria</label>
+            <input type="text" id="category" class="inputsForm" name="category" required>
+            <button type="submit">Agregar producto</button>
+        </form>
+        <div id="productsList" style="display: flex; flex-direction: row; gap: 1rem;">
+        </div>
+    </div>    
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
