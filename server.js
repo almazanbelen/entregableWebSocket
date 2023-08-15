@@ -8,7 +8,6 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-const productRouter = require("./src/routes/products")
 
 const PORT = 8080;
 
@@ -22,7 +21,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.static(path.join(__dirname, "/src/public")))
 
-app.use("/products", productRouter)
+
 
 app.get("/", (req, res) => {
   res.render("index.hbs")

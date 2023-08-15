@@ -8,7 +8,7 @@
 <body>
    
     <div class="form-product">
-        <form action="/product" method="get" id="productForm" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;"> 
+        <form action="/products" method="post" id="productForm" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;"> 
             <h1 class="title">Agregar un producto</h1>       
             <label for="title">Nombre del producto</label>
             <input type="text" id="title" class="inputsForm" name="title" required>
@@ -24,8 +24,7 @@
             <input type="text" id="category" class="inputsForm" name="category" required>
             <button type="submit">Agregar producto</button>
         </form>
-        <div id="productsList" style="display: flex; flex-direction: row; gap: 1rem;">
-        </div>
+        <div id="productsList" style="display: flex; flex-direction: row; gap: 1rem;"></div>
     </div>    
     
     <script src="/socket.io/socket.io.js"></script>
